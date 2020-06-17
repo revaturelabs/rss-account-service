@@ -18,14 +18,12 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "ACCID_PK_SEQ")
 	private Long accId;
 	
-    @OneToOne
-    @JoinColumn(name = "ACCOUNT_USER_FK", referencedColumnName = "U_ID")
-	@Column(name = "U_ID", nullable = false)
+    @OneToOne(targetEntity = User.class)
+    @JoinColumn(name = "U_ID_FK", referencedColumnName = "U_ID")
     private Long userId;
 	
-    @OneToOne
-    @JoinColumn(name = "ACCOUNT_ACCTYPE_FK", referencedColumnName = "ACCTYPE_ID")
-	@Column(name = "ACCTYPE_ID", nullable = false)
+    @OneToOne(targetEntity = AccountType.class)
+    @JoinColumn(name = "ACCTYPE_ID_FK", referencedColumnName = "ACCTYPE_ID")
     private Long accTypeId;
 	
     @Column(name = "POINTS", columnDefinition = "INTEGER DEFAULT 0")
