@@ -8,4 +8,8 @@ import com.revature.entity.User;
 @Repository
 public interface UserDAO extends JpaRepository<User, Long> {
 	
+	//login validation dao method
+	public boolean existsByEmailAndPassword(String email, String password);
+	//getting user information
+	public User findUserByEmail(String email);
 }

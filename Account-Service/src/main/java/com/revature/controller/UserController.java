@@ -38,4 +38,29 @@ public class UserController {
         return this.userservice.addUser(user);
     }
 	
+    @RequestMapping(value = "/login", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    @ResponseBody()
+    public User loginUser(@RequestBody User user) {
+    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), user.getPassword()) == false) {
+    		return null;
+    	} else {
+    		User u = this.userservice.findUserByEmail(user.getEmail());
+    		u.setPassword("*****");
+    		return u;
+    	}
+    }
+    
+    @RequestMapping(value = "/getuserbyemail", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    @ResponseBody()
+    public User findUserByEmail(@RequestBody User user) {
+    	User u = this.userservice.findUserByEmail(user.getEmail());
+    	//changing password before sending user to front end for security
+    	u.setPassword("*****");
+    	return u;
+    }
+    
 }
