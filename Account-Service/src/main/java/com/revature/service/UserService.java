@@ -11,8 +11,13 @@ import com.revature.entity.User;
 @Service
 public class UserService {
 
+	
+	private UserDAO userdao;
+	
 	@Autowired
-	UserDAO userdao;
+	public UserService(UserDAO userdao) {
+		this.userdao = userdao;
+	}
 	
     public List<User> getAllUsers() {
         return this.userdao.findAll();
@@ -22,4 +27,12 @@ public class UserService {
         return this.userdao.save(user);
     }
 	
+    public boolean existsByEmailAndPassword(String email, String password) {
+    	return this.userdao.existsByEmailAndPassword(email, password);
+    }
+   
+    public User findUserByEmail(String email) {
+    	return this.userdao.findUserByEmail(email);
+    }
+    
 }
