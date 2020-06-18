@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="Console" target="System_out">
+			<PatternLayout>
+				<Pattern>
+				[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</Pattern>
+			</PatternLayout>
+		</Console>
+		<File name="File" fileName="./pleaselog.log">
+			<PatternLayout>
+				<Pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</Pattern>
+			</PatternLayout>
+		
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.revature.util.Logging" level = "info" additivity= "false">
+			
+			<AppenderRef ref = "File"/>
+		</Logger>
+		<Root>
+			
+			<AppenderRef ref = "File"/>
+		</Root>
+	</Loggers>
+</Configuration>

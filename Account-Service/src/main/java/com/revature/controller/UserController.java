@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.entity.User;
 import com.revature.service.AccountService;
 import com.revature.service.UserService;
+import com.revature.util.Logging;
+
 
 @RestController
 @RequestMapping("/user")
@@ -37,6 +39,7 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User addNewUser(@RequestBody User user) {
+    	Logging.Log4("info", user.getFirstName() + " " + user.getLastName() + " has registered.");
         return this.userservice.addUser(user);
     }
 	
@@ -50,6 +53,7 @@ public class UserController {
     	} else {
     		User u = this.userservice.findUserByEmail(user.getEmail());
     		u.setPassword("*****");
+    		Logging.Log4("info", u.getUserId() + " has logged in");
     		return u;
     	}
     }
@@ -84,6 +88,7 @@ public class UserController {
         u.setEmail(user.getEmail());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
+        Logging.Log4("info", u.getUserId() + " has updated their information");
         this.userservice.addUser(u);
     }
     
@@ -94,6 +99,7 @@ public class UserController {
     	System.out.println(user.getUserId());
     	User u = this.userservice.findById(user.getUserId());
         u.setPassword(user.getPassword());
+        Logging.Log4("info", u.getUserId() + " has updated their password");
         this.userservice.addUser(u);
     }
     
@@ -103,6 +109,7 @@ public class UserController {
     public void updateProfilePic(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
         u.setProfilePic(user.getProfilePic());
+        Logging.Log4("info", u.getUserId() + " has updated their profile picture");
         this.userservice.addUser(u);
     }
     

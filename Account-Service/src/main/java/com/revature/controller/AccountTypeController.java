@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.entity.AccountType;
 import com.revature.service.AccountTypeService;
+import com.revature.util.Logging;
 
 @RestController
 @RequestMapping("/acctype")
@@ -34,6 +35,7 @@ public class AccountTypeController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public AccountType addAccountType(@RequestBody AccountType accType) {
+    	Logging.Log4("info", accType.getType() + " has been added");
     	return this.acctypeservice.addAccountType(accType);
     }
 	
