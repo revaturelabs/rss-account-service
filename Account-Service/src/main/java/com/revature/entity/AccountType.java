@@ -14,7 +14,7 @@ public class AccountType {
     @Column(name = "ACCTYPE_ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "ACCTYPEID_PK_SEQ")
-	private Long accTypeId;
+	private int accTypeId;
     
     @Column(name = "TYPE", unique = true, nullable = false)
     private String type;
@@ -28,11 +28,11 @@ public class AccountType {
 		this.type = type;
 	}
 
-	public Long getAccTypeId() {
+	public int getAccTypeId() {
 		return accTypeId;
 	}
 
-	public void setAccTypeId(Long accTypeId) {
+	public void setAccTypeId(int accTypeId) {
 		this.accTypeId = accTypeId;
 	}
 
