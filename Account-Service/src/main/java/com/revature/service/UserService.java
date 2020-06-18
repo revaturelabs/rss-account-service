@@ -1,6 +1,7 @@
 package com.revature.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,11 @@ public class UserService {
    
     public User findUserByEmail(String email) {
     	return this.userdao.findUserByEmail(email);
+    }
+    
+    public User findById(int userId) {
+
+        return this.userdao.findUserByUserId(userId);
     }
     
 }

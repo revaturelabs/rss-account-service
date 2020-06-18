@@ -1,5 +1,6 @@
 package com.revature.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,15 +17,17 @@ public class Account {
     @Column(name = "ACC_ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "ACCID_PK_SEQ")
-	private Long accId;
+	private int accId;
 	
-    @OneToOne(targetEntity = User.class)
-    @JoinColumn(name = "U_ID_FK", referencedColumnName = "U_ID")
-    private Long userId;
+    //@OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
+    //@JoinColumn(name = "U_ID_FK", referencedColumnName = "U_ID")
+    @Column(name = "U_ID")
+    private int userId;
 	
-    @OneToOne(targetEntity = AccountType.class)
-    @JoinColumn(name = "ACCTYPE_ID_FK", referencedColumnName = "ACCTYPE_ID")
-    private Long accTypeId;
+    //@OneToOne(targetEntity = AccountType.class, cascade = CascadeType.ALL)
+    //@JoinColumn(name = "ACCTYPE_ID_FK", referencedColumnName = "ACCTYPE_ID")
+    @Column(name = "ACCTYPE_ID")
+    private int accTypeId;
 	
     @Column(name = "POINTS", columnDefinition = "INTEGER DEFAULT 0")
 	private int points;
@@ -33,8 +36,11 @@ public class Account {
 		super();
 	}
 
-	public Account(Long userId, Long accTypeId, int points) {
+	
+	
+	public Account(int accId, int userId, int accTypeId, int points) {
 		super();
+		this.accId = accId;
 		this.userId = userId;
 		this.accTypeId = accTypeId;
 		this.points = points;
@@ -42,27 +48,44 @@ public class Account {
 
 	
 	
-	public Long getAccId() {
+	public Account(int userId, int accTypeId, int points) {
+		super();
+		this.userId = userId;
+		this.accTypeId = accTypeId;
+		this.points = points;
+	}
+
+	
+
+	public Account(int userId, int accTypeId) {
+		super();
+		this.userId = userId;
+		this.accTypeId = accTypeId;
+	}
+
+
+
+	public int getAccId() {
 		return accId;
 	}
 
-	public void setAccId(Long accId) {
+	public void setAccId(int accId) {
 		this.accId = accId;
 	}
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
-	public Long getAccTypeId() {
+	public int getAccTypeId() {
 		return accTypeId;
 	}
 
-	public void setAccTypeId(Long accTypeId) {
+	public void setAccTypeId(int accTypeId) {
 		this.accTypeId = accTypeId;
 	}
 
