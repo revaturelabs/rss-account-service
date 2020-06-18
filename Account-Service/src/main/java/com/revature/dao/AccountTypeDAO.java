@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.revature.entity.AccountType;
 
 @Repository
-public interface AccountTypeDAO extends JpaRepository<AccountType, Long> {
+public interface AccountTypeDAO extends JpaRepository<AccountType, Integer> {
 
 }

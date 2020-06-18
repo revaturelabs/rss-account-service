@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.entity.User;
+import com.revature.service.AccountService;
 import com.revature.service.UserService;
 
 @RestController
@@ -26,7 +28,7 @@ public class UserController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<User> getAllUsers() {
-        return userservice.getAllUsers();
+    	return userservice.getAllUsers();
     }
 
     
@@ -62,5 +64,47 @@ public class UserController {
     	u.setPassword("*****");
     	return u;
     }
+ 
+    @RequestMapping(value = "/getuserbyid", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    @ResponseBody()
+    public User findUserById(@RequestBody User user) {
+    	User u = this.userservice.findById(user.getUserId());
+    	//changing password before sending user to front end for security
+    	u.setPassword("*****");
+    	return u;
+    }
+    
+    @RequestMapping(value= "/updateinfo", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody()
+    public void updateInformation(@RequestBody User user) {
+        User u = this.userservice.findById(user.getUserId());
+        u.setEmail(user.getEmail());
+        u.setFirstName(user.getFirstName());
+        u.setLastName(user.getLastName());
+        this.userservice.addUser(u);
+    }
+    
+    @RequestMapping(value= "/updatepassword", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    @ResponseBody()
+    public void updatePassword(@RequestBody User user) {
+    	System.out.println(user.getUserId());
+    	User u = this.userservice.findById(user.getUserId());
+        u.setPassword(user.getPassword());
+        this.userservice.addUser(u);
+    }
+    
+    @RequestMapping(value= "/updateprofilepic", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody()
+    public void updateProfilePic(@RequestBody User user) {
+        User u = this.userservice.findById(user.getUserId());
+        u.setProfilePic(user.getProfilePic());
+        this.userservice.addUser(u);
+    }
+    
     
 }

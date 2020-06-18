@@ -18,51 +18,38 @@ public class User {
     @Column(name = "U_ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "USER_PK_SEQ")
-    private Long id;
+    private int userId;
     
-    @Column(name = "U_EMAIL", unique = true, nullable = false)
+    @Column(name = "U_EMAIL", unique = true)
 	private String email;
     
-    @Column(name = "U_PASSWORD", nullable = false)
+    @Column(name = "U_PASSWORD")
 	private String password;
     
-    @Column(name = "U_PIC", nullable = true)
+    @Column(name = "U_PIC", nullable = true, columnDefinition = "BLOB")
     private byte[] profilePic;
     
-    @Column(name = "FIRST_NAME", nullable = false)
+    @Column(name = "FIRST_NAME")
     private String firstName;
     
-    @Column(name = "LAST_NAME", nullable = false)
+    @Column(name = "LAST_NAME")
     private String lastName;
     
     @Column(name = "IS_ADMIN", columnDefinition = "boolean default false")
     private boolean isAdmin;
 
+    
+    
 	public User() {
 		super();
 	}
 
-	public User(String email, String password, byte[] profilePic, String firstName, String lastName) {
-		super();
-		this.email = email;
-		this.password = password;
-		this.profilePic = profilePic;
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+	
 
-	public User(String email, String password, String firstName, String lastName) {
-		super();
-		this.email = email;
-		this.password = password;
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-	public User(Long id, String email, String password, byte[] profilePic, String firstName, String lastName,
+	public User(int userId, String email, String password, byte[] profilePic, String firstName, String lastName,
 			boolean isAdmin) {
 		super();
-		this.id = id;
+		this.userId = userId;
 		this.email = email;
 		this.password = password;
 		this.profilePic = profilePic;
@@ -71,22 +58,22 @@ public class User {
 		this.isAdmin = isAdmin;
 	}
 
-	public User(String email, String password, byte[] profilePic, String firstName, String lastName, boolean isAdmin) {
+	
+
+	public User(int userId, String password) {
 		super();
-		this.email = email;
+		this.userId = userId;
 		this.password = password;
-		this.profilePic = profilePic;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.isAdmin = isAdmin;
 	}
 
-	public Long getId() {
-		return id;
+
+
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getEmail() {
@@ -139,7 +126,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", profilePic="
+		return "User [id=" + userId + ", email=" + email + ", password=" + password + ", profilePic="
 				+ Arrays.toString(profilePic) + ", firstName=" + firstName + ", lastName=" + lastName + ", isAdmin="
 				+ isAdmin + "]";
 	}
