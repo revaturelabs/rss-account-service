@@ -1,0 +1,3 @@
+2020-06-17 12:30:56 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER_TABLE ACCTYPE_TABLE ACCOUNT_TABLE[*]"; SQL statement:
+SELECT * FROM USER_TABLE ACCTYPE_TABLE ACCOUNT_TABLE [42000-200]
