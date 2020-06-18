@@ -39,8 +39,7 @@ public class AccountTypeController {
     	return this.acctypeservice.addAccountType(accType);
     }
 	
-    @RequestMapping(value = "/getallaccounttype", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/getallaccounttype", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public List<AccountType> getAllAccountType() {
