@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import com.revature.entity.Account;
 import com.revature.entity.User;
 import com.revature.service.AccountService;
+import com.revature.util.Logging;
 
 @RestController
 @RequestMapping("/account")
@@ -36,6 +37,7 @@ public class AccountController {
     public void updatePoints(@RequestBody Account acc) {
         Account a = this.accservice.findById(acc.getAccId());
         a.setPoints(acc.getPoints());
+        Logging.Log4("info", a.getUserId() + " has updated their points");
         this.accservice.addAccount(a);
     }
 	
@@ -44,6 +46,7 @@ public class AccountController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public Account addAccount(@RequestBody Account acc) {
+    	Logging.Log4("info", acc.getUserId() + " has added an account");
         return this.accservice.addAccount(acc);
     }
  
