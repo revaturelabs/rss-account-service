@@ -80,15 +80,17 @@ public class UserController {
     	return u;
     }
     
-    @RequestMapping(value= "/updateinfo", method = RequestMethod.POST)
+    @RequestMapping(value= "/updateinfo", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updateInformation(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
+        System.out.println(u.getPassword());
         u.setEmail(user.getEmail());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
-        Logging.Log4("info", u.getUserId() + " has updated their information");
+        Logging.Log4("info", user.getUserId() + " has updated their information");
         this.userservice.addUser(u);
     }
     
@@ -103,7 +105,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    @RequestMapping(value= "/updateprofilepic", method = RequestMethod.POST)
+    @RequestMapping(value= "/updateprofilepic", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updateProfilePic(@RequestBody User user) {
@@ -112,6 +115,24 @@ public class UserController {
         Logging.Log4("info", u.getUserId() + " has updated their profile picture");
         this.userservice.addUser(u);
     }
+    
+    @RequestMapping(value= "/updateisadmin", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody()
+    public void updateIsAdmin(@RequestBody User user) {
+        User u = this.userservice.findById(user.getUserId());
+        if(u.isAdmin() == true) {
+        	u.setAdmin(false);
+        	this.userservice.addUser(u);
+        } else {
+        	u.setAdmin(true);
+        	this.userservice.addUser(u);
+        }
+        Logging.Log4("info", "Updated admin status to " + u.isAdmin() + " for user with id " + user.getUserId());
+    }
+    
+    
     
     
 }

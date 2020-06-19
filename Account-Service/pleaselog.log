@@ -1,2 +1,11 @@
 [INFO ] 2020-06-18 16:04:32.736 [http-nio-9000-exec-2] LoggingController - it works
 [INFO ] 2020-06-18 16:33:10.973 [http-nio-9000-exec-2] Logging - AnyaDog
+[INFO ] 2020-06-18 18:03:31.544 [http-nio-9000-exec-6] Logging - kronos slapps has registered.
+[INFO ] 2020-06-18 18:05:01.515 [http-nio-9000-exec-1] Logging - 1 has logged in
+[INFO ] 2020-06-18 18:05:26.136 [http-nio-9000-exec-8] Logging - 1 has logged in
+[INFO ] 2020-06-18 18:05:59.384 [http-nio-9000-exec-9] Logging - Bug Hunter has been added
+[INFO ] 2020-06-18 18:16:09.578 [http-nio-9000-exec-1] Logging - 1 has updated their password
+[INFO ] 2020-06-18 18:24:43.647 [http-nio-9000-exec-3] Logging - 1 has updated their information
+[INFO ] 2020-06-18 18:55:45.417 [http-nio-9000-exec-1] Logging - kerry jerry has registered.
+[INFO ] 2020-06-18 18:56:10.042 [http-nio-9000-exec-4] Logging - Updated admin status to true for user with id 1
+[INFO ] 2020-06-18 18:56:22.452 [http-nio-9000-exec-6] Logging - Updated admin status to false for user with id 1

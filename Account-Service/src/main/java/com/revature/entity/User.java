@@ -46,6 +46,16 @@ public class User {
 
 	
 
+	public User(int userId, String email, String firstName, String lastName) {
+		super();
+		this.userId = userId;
+		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+
+
 	public User(int userId, String email, String password, byte[] profilePic, String firstName, String lastName,
 			boolean isAdmin) {
 		super();
