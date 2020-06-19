@@ -1,7 +1,6 @@
 package com.revature.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,11 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.beans.Encryption;
 import com.revature.entity.User;
-import com.revature.service.AccountService;
 import com.revature.service.UserService;
 import com.revature.util.Logging;
-
 
 @RestController
 @RequestMapping("/user")
@@ -39,7 +37,13 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User addNewUser(@RequestBody User user) {
+    	
+    	// Logs a new user
     	Logging.Log4("info", user.getFirstName() + " " + user.getLastName() + " has registered.");
+    	
+    	// Will encrypt user password for database security
+    	user.setPassword(Encryption.encrypt(user.getPassword()));
+    	
         return this.userservice.addUser(user);
     }
 	
@@ -48,7 +52,7 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User loginUser(@RequestBody User user) {
-    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), user.getPassword()) == false) {
+    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), Encryption.encrypt(user.getPassword())) == false) {
     		return null;
     	} else {
     		User u = this.userservice.findUserByEmail(user.getEmail());
@@ -86,7 +90,6 @@ public class UserController {
     @ResponseBody()
     public void updateInformation(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
-        System.out.println(u.getPassword());
         u.setEmail(user.getEmail());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
@@ -131,8 +134,5 @@ public class UserController {
         }
         Logging.Log4("info", "Updated admin status to " + u.isAdmin() + " for user with id " + user.getUserId());
     }
-    
-    
-    
-    
+   
 }
