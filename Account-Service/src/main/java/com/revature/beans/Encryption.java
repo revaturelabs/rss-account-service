@@ -12,8 +12,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class Encryption {
 
-	private static String secretKey = "Pega 4 life";
-	private static String salt = "ssshhhhhhhhhhh!!!!";
+	private static String secretKey = "Pega 4 life"; //DO NOT CHANGE!!!
+	private static String salt = "ssshhhhhhhhhhh!!!!"; //DO NOT CHANGE!!!
 	 
 	public static String encrypt(String strToEncrypt) 
 	{
