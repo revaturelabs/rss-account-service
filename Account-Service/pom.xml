@@ -40,7 +40,12 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
 		</dependency>
-		
+		<dependency>
+	<groupId>io.rest-assured</groupId>
+	<artifactId>rest-assured</artifactId>
+	<version>3.0.7</version>
+	<scope>test</scope>
+</dependency>
 
 		        <dependency>
             <groupId>org.springdoc</groupId>
