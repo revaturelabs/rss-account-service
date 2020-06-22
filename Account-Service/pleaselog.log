@@ -9,3 +9,5 @@
 [INFO ] 2020-06-18 18:55:45.417 [http-nio-9000-exec-1] Logging - kerry jerry has registered.
 [INFO ] 2020-06-18 18:56:10.042 [http-nio-9000-exec-4] Logging - Updated admin status to true for user with id 1
 [INFO ] 2020-06-18 18:56:22.452 [http-nio-9000-exec-6] Logging - Updated admin status to false for user with id 1
+[INFO ] 2020-06-22 10:50:20.805 [http-nio-9000-exec-6] Logging - test test has registered.
+[INFO ] 2020-06-22 10:56:17.421 [http-nio-9000-exec-10] Logging - 1 has logged in
