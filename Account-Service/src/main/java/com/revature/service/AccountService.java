@@ -28,7 +28,7 @@ public class AccountService {
 
     
     public Account findById(int accId) {
-    	return this.accdao.getOne(accId);
+    	return this.accdao.findAccountByAccId(accId);
     }
     
     public List<Account> findAccountById(int userId) {
