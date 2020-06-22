@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.revature.dao.AccountDAO;
 import com.revature.entity.Account;
-import com.revature.entity.User;
 
 @Service
 public class AccountService {
