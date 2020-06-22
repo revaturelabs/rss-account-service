@@ -12,4 +12,6 @@ import com.revature.entity.Account;
 public interface AccountDAO extends JpaRepository<Account, Integer> {
 	
 	public List<Account> findAccountByUserId(int userId);
+	
+	public Account findAccountByAccId(int accId);
 }

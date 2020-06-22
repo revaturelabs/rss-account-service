@@ -31,8 +31,8 @@ public class AccountController {
 		this.accservice = accservice;
 	}
 
-	
-    @RequestMapping(value= "/updatepoints", method = RequestMethod.POST)
+	//changed "/updatepoints" to /post/points
+    @RequestMapping(value= "/points", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updatePoints(@RequestBody Account acc) {
@@ -42,7 +42,8 @@ public class AccountController {
         this.accservice.addAccount(a);
     }
 	
-    @RequestMapping(value = "/addaccount", method = RequestMethod.POST,
+    //changed "/addaccount" to "/post/account"
+    @RequestMapping(value = "/account", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -50,16 +51,19 @@ public class AccountController {
     	Logging.Log4("info", acc.getUserId() + " has added an account");
         return this.accservice.addAccount(acc);
     }
- 
-    @RequestMapping(value = "/getaccountbyaccid", method = RequestMethod.POST,
+    
+    //changed "/getaccountbyaccid" to "/post/account/ai"
+    @RequestMapping(value = "/account/ai", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public Account getAccountById(@RequestBody Account acc) {
-        return this.accservice.findById(acc.getAccId());
+        Account a = this.accservice.findById(acc.getAccId());
+        return a;
     }
     
-    @RequestMapping(value = "/getaccountbyuserid", method = RequestMethod.POST,
+    //changed "/getaccountbyuserid" to "/post/account/ui"
+    @RequestMapping(value = "/account/ui", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()

@@ -26,13 +26,14 @@ public class UserController {
     @Autowired
     UserService userservice;
 
+    //changed "/all" to "/all"
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<User> getAllUsers() {
     	return userservice.getAllUsers();
     }
 
-    
-    @RequestMapping(value = "/adduser", method = RequestMethod.POST,
+    //changed "/adduser" to "/user"
+    @RequestMapping(value = "/user", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -47,7 +48,7 @@ public class UserController {
         return this.userservice.addUser(user);
     }
 	
-    @RequestMapping(value = "/login", method = RequestMethod.POST,
+    @RequestMapping(value = "/login", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -62,29 +63,35 @@ public class UserController {
     	}
     }
     
-    @RequestMapping(value = "/getuserbyemail", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
-    public User findUserByEmail(@RequestBody User user) {
-    	User u = this.userservice.findUserByEmail(user.getEmail());
-    	//changing password before sending user to front end for security
-    	u.setPassword("*****");
-    	return u;
-    }
- 
-    @RequestMapping(value = "/getuserbyid", method = RequestMethod.POST,
+    //changed "/getuserbyemail" to 
+//    @RequestMapping(value = "/getuserbyemail", method = RequestMethod.POST,
+//            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+//    @ResponseStatus(code = HttpStatus.OK)
+//    @ResponseBody()
+//    public User findUserByEmail(@RequestBody User user) {
+//    	User u = this.userservice.findUserByEmail(user.getEmail());
+//    	//changing password before sending user to front end for security
+//    	u.setPassword("*****");
+//    	return u;
+//    }
+
+    //Changed "/getuserbyid" to "/user"
+    @RequestMapping(value = "/user", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User findUserById(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
+    	if(u==null) {
+    		u = this.userservice.findUserByEmail(user.getEmail());
+    	}
     	//changing password before sending user to front end for security
     	u.setPassword("*****");
     	return u;
     }
     
-    @RequestMapping(value= "/updateinfo", method = RequestMethod.POST,
+    //changed "/updateinf" to "/update/i"
+    @RequestMapping(value= "/update/i", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -97,7 +104,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    @RequestMapping(value= "/updatepassword", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    //changed "/updatepassword" to "/update/p"
+    @RequestMapping(value= "/update/p", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
@@ -107,7 +115,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    @RequestMapping(value= "/updateprofilepic", method = RequestMethod.POST,
+    //changed "updateprofilepic" to "/update/pp"
+    @RequestMapping(value= "/update/pp", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -118,7 +127,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    @RequestMapping(value= "/updateisadmin", method = RequestMethod.POST,
+    //chagned "/updateisadmin" to "/update/a"
+    @RequestMapping(value= "/update/a", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
