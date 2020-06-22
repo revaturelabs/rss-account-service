@@ -30,7 +30,8 @@ public class AccountTypeController {
 		this.acctypeservice = acctypeservice;
 	}
 	
-    @RequestMapping(value = "/addaccounttype", method = RequestMethod.POST,
+	//changed "addaccounttype" to "/post/at"
+    @RequestMapping(value = "/atype", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -39,7 +40,8 @@ public class AccountTypeController {
     	return this.acctypeservice.addAccountType(accType);
     }
 	
-    @RequestMapping(value = "/getallaccounttype", method = RequestMethod.GET)
+    //changed "/getallaccounttype" to "/get/at"
+    @RequestMapping(value = "/atype", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public List<AccountType> getAllAccountType() {
