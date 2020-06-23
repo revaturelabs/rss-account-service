@@ -47,7 +47,7 @@ public class UserController {
         return this.userservice.addUser(user);
     }
 	
-    @RequestMapping(value = "/login", method = RequestMethod.GET,
+    @RequestMapping(value = "/login", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
