@@ -31,7 +31,7 @@ public class AccountController {
 		this.accservice = accservice;
 	}
 
-	//changed "/updatepoints" to /post/points
+	//changed "/updatepoints" to /points
     @RequestMapping(value= "/points", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -41,8 +41,19 @@ public class AccountController {
         Logging.Log4("info", a.getUserId() + " has updated their points");
         this.accservice.addAccount(a);
     }
+    
+    @RequestMapping(value= "/points/a", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody()
+    public void addPoints(@RequestBody Account acc) {
+        Account a = this.accservice.findById(acc.getAccId());
+        a.setPoints(a.getPoints() + acc.getPoints());
+        Logging.Log4("info", a.getUserId() + " has had "+acc.getPoints()+"points added to their account");
+        this.accservice.addAccount(a);
+    }
+
 	
-    //changed "/addaccount" to "/post/account"
+    //changed "/addaccount" to "/account"
     @RequestMapping(value = "/account", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
@@ -52,7 +63,7 @@ public class AccountController {
         return this.accservice.addAccount(acc);
     }
     
-    //changed "/getaccountbyaccid" to "/post/account/ai"
+    //changed "/getaccountbyaccid" to "/account/ai"
     @RequestMapping(value = "/account/ai", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
@@ -62,7 +73,7 @@ public class AccountController {
         return a;
     }
     
-    //changed "/getaccountbyuserid" to "/post/account/ui"
+    //changed "/getaccountbyuserid" to "/account/ui"
     @RequestMapping(value = "/account/ui", method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
@@ -70,4 +81,6 @@ public class AccountController {
     public List<Account> findAccountByUserId(@RequestBody User acc) {
         return this.accservice.findAccountById(acc.getUserId());
     }
+    
+    
 }
