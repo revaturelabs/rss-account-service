@@ -111,7 +111,7 @@ public class UserController {
     public void updatePassword(@RequestBody User user) {
     	System.out.println(user.getUserId());
     	User u = this.userservice.findById(user.getUserId());
-        u.setPassword(user.getPassword());
+        u.setPassword(Encryption.encrypt(user.getPassword()));
         Logging.Log4("info", u.getUserId() + " has updated their password");
         this.userservice.addUser(u);
     }
