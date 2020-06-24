@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.beans.Encryption;
 import com.revature.entity.User;
 import com.revature.service.UserService;
 import com.revature.util.Logging;
@@ -43,17 +42,17 @@ public class UserController {
     	Logging.Log4("info", user.getFirstName() + " " + user.getLastName() + " has registered.");
     	
     	// Will encrypt user password for database security
-    	user.setPassword(Encryption.encrypt(user.getPassword()));
+    	user.setPassword(user.getPassword());
     	
         return this.userservice.addUser(user);
     }
 	
-    @RequestMapping(value = "/login", method = RequestMethod.GET,
+    @RequestMapping(value = "/login", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User loginUser(@RequestBody User user) {
-    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), Encryption.encrypt(user.getPassword())) == false) {
+    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), user.getPassword()) == false) {
     		return null;
     	} else {
     		User u = this.userservice.findUserByEmail(user.getEmail());
@@ -109,7 +108,6 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
-    	System.out.println(user.getUserId());
     	User u = this.userservice.findById(user.getUserId());
         u.setPassword(user.getPassword());
         Logging.Log4("info", u.getUserId() + " has updated their password");
