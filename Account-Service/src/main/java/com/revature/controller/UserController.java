@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,9 @@ public class UserController {
 
     @Autowired
     UserService userservice;
+    
+    // Bcrypt encryption for user password
+    BCryptPasswordEncoder encrypt = new BCryptPasswordEncoder();
 
     //changed "/all" to "/all"
     @RequestMapping(value = "/all", method = RequestMethod.GET)
@@ -42,7 +46,10 @@ public class UserController {
     	Logging.Log4("info", user.getFirstName() + " " + user.getLastName() + " has registered.");
     	
     	// Will encrypt user password for database security
-    	user.setPassword(user.getPassword());
+    	user.setPassword(encrypt.encode(user.getPassword()));
+//    	String temp = encrypt.encode(user.getPassword());
+//    	System.out.println(user.getPassword());
+//    	System.out.println(temp);
     	
         return this.userservice.addUser(user);
     }
@@ -52,27 +59,16 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User loginUser(@RequestBody User user) {
-    	if(this.userservice.existsByEmailAndPassword(user.getEmail(), user.getPassword()) == false) {
+    	User current = this.userservice.findUserByEmail(user.getEmail());
+    	if(!(this.userservice.existsByEmail(user.getEmail()) && encrypt.matches(user.getPassword(), current.getPassword()))) {
     		return null;
     	} else {
     		User u = this.userservice.findUserByEmail(user.getEmail());
-    		u.setPassword("*****");
+    		//u.setPassword("*****");
     		Logging.Log4("info", u.getUserId() + " has logged in");
     		return u;
     	}
     }
-    
-    //changed "/getuserbyemail" to 
-//    @RequestMapping(value = "/getuserbyemail", method = RequestMethod.POST,
-//            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-//    @ResponseStatus(code = HttpStatus.OK)
-//    @ResponseBody()
-//    public User findUserByEmail(@RequestBody User user) {
-//    	User u = this.userservice.findUserByEmail(user.getEmail());
-//    	//changing password before sending user to front end for security
-//    	u.setPassword("*****");
-//    	return u;
-//    }
 
     //Changed "/getuserbyid" to "/user"
     @RequestMapping(value = "/user", method = RequestMethod.GET,
@@ -109,6 +105,7 @@ public class UserController {
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
+    	u.setPassword(encrypt.encode(user.getPassword()));
         Logging.Log4("info", u.getUserId() + " has updated their password");
         this.userservice.addUser(u);
     }
