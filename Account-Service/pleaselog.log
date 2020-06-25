@@ -25,3 +25,10 @@
 [INFO ] 2020-06-22 17:15:58.324 [http-nio-9000-exec-1] Logging - 1 has added an account
 [INFO ] 2020-06-22 17:36:44.536 [http-nio-9000-exec-1] Logging - 1 has had 10points added to their account
 [INFO ] 2020-06-22 17:37:32.928 [http-nio-9000-exec-10] Logging - 1 has had 10points added to their account
+[INFO ] 2020-06-24 16:13:49.825 [http-nio-9000-exec-7] Logging - string string has registered.
+[INFO ] 2020-06-24 16:16:47.601 [http-nio-9000-exec-4] Logging - string string has registered.
+[INFO ] 2020-06-24 16:20:48.117 [http-nio-9000-exec-4] Logging - string string has registered.
+[INFO ] 2020-06-24 16:57:19.337 [http-nio-9000-exec-2] Logging - 3 has logged in
+[INFO ] 2020-06-24 17:05:41.114 [http-nio-9000-exec-3] Logging - test test has registered.
+[INFO ] 2020-06-24 17:05:59.376 [http-nio-9000-exec-6] Logging - 4 has logged in
+[INFO ] 2020-06-24 17:08:56.833 [http-nio-9000-exec-8] Logging - 1 has updated their information

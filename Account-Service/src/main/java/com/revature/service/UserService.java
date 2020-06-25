@@ -27,8 +27,8 @@ public class UserService {
         return this.userdao.save(user);
     }
 	
-    public boolean existsByEmailAndPassword(String email, String password) {
-    	return this.userdao.existsByEmailAndPassword(email, password);
+    public boolean existsByEmail(String email) {
+    	return this.userdao.existsByEmail(email);
     }
    
     public User findUserByEmail(String email) {
