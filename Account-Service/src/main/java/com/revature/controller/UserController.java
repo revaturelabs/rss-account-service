@@ -85,7 +85,7 @@ public class UserController {
     	return u;
     }
     
-    //changed "/updateinf" to "/update/i"
+    //changed "/updateinf" to "/update/i"  /{userId}
     @RequestMapping(value= "/update/i", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
@@ -105,7 +105,7 @@ public class UserController {
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
-        u.setPassword(encrypt.encode(user.getPassword()));
+    	u.setPassword(encrypt.encode(user.getPassword()));
         Logging.Log4("info", u.getUserId() + " has updated their password");
         this.userservice.addUser(u);
     }

@@ -25,10 +25,72 @@
 [INFO ] 2020-06-22 17:15:58.324 [http-nio-9000-exec-1] Logging - 1 has added an account
 [INFO ] 2020-06-22 17:36:44.536 [http-nio-9000-exec-1] Logging - 1 has had 10points added to their account
 [INFO ] 2020-06-22 17:37:32.928 [http-nio-9000-exec-10] Logging - 1 has had 10points added to their account
-[INFO ] 2020-06-24 16:13:49.825 [http-nio-9000-exec-7] Logging - string string has registered.
-[INFO ] 2020-06-24 16:16:47.601 [http-nio-9000-exec-4] Logging - string string has registered.
-[INFO ] 2020-06-24 16:20:48.117 [http-nio-9000-exec-4] Logging - string string has registered.
-[INFO ] 2020-06-24 16:57:19.337 [http-nio-9000-exec-2] Logging - 3 has logged in
-[INFO ] 2020-06-24 17:05:41.114 [http-nio-9000-exec-3] Logging - test test has registered.
-[INFO ] 2020-06-24 17:05:59.376 [http-nio-9000-exec-6] Logging - 4 has logged in
-[INFO ] 2020-06-24 17:08:56.833 [http-nio-9000-exec-8] Logging - 1 has updated their information
+[ERROR] 2020-06-24 16:17:20.978 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:17:25.129 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:17:29.270 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:17:33.307 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:17:37.287 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:17:41.193 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:21:07.509 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:21:11.802 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:21:16.022 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-24 16:21:20.131 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[INFO ] 2020-06-24 16:21:47.124 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-06-24 16:23:39.100 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-06-24 16:31:16.116 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-06-24 16:38:04.999 [http-nio-9000-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-06-24 16:39:31.614 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-06-24 16:39:31.923 [http-nio-9000-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-06-24 16:41:17.137 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-24 16:41:17.286 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-24 16:41:17.337 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-24 16:53:17.579 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-24 16:53:17.769 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-24 16:53:17.824 [http-nio-9000-exec-3] Logging - 1 has updated their points
+[INFO ] 2020-06-24 16:56:15.849 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-24 16:56:16.083 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-24 16:56:16.134 [http-nio-9000-exec-3] Logging - 1 has updated their points
+[INFO ] 2020-06-24 16:56:45.742 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-24 16:56:45.970 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-24 16:56:46.023 [http-nio-9000-exec-3] Logging - 1 has updated their points
+[INFO ] 2020-06-24 17:01:39.087 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-24 17:01:39.309 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-24 17:01:39.359 [http-nio-9000-exec-3] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:15:49.975 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:15:50.254 [http-nio-9000-exec-3] Logging - null null has registered.
+[INFO ] 2020-06-25 11:15:50.291 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:16:52.786 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:16:53.068 [http-nio-9000-exec-3] Logging - null null has registered.
+[INFO ] 2020-06-25 11:16:53.110 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:22:16.713 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:22:16.906 [http-nio-9000-exec-3] Logging - 1 has added an account
+[ERROR] 2020-06-25 11:22:16.917 [http-nio-9000-exec-3] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D10: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(ACCTYPE_ID) REFERENCES PUBLIC.ACCTYPE_TABLE(ACCTYPE_ID) (0)"; SQL statement:
+insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?) [23506-200]
+[INFO ] 2020-06-25 11:22:17.005 [http-nio-9000-exec-2] Logging - null null has registered.
+[INFO ] 2020-06-25 11:22:17.049 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:24:12.992 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:24:13.162 [http-nio-9000-exec-2] Logging - 1 has added an account
+[INFO ] 2020-06-25 11:24:13.213 [http-nio-9000-exec-3] Logging - null null has registered.
+[INFO ] 2020-06-25 11:24:13.244 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:29:16.079 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:29:16.261 [http-nio-9000-exec-2] Logging - 1 has added an account
+[INFO ] 2020-06-25 11:29:16.315 [http-nio-9000-exec-3] Logging - null null has registered.
+[INFO ] 2020-06-25 11:29:16.394 [http-nio-9000-exec-5] Logging - 1 has updated their points
+[ERROR] 2020-06-25 11:34:38.134 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-25 11:34:42.226 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-25 11:34:46.285 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-25 11:34:50.282 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[INFO ] 2020-06-25 11:35:16.064 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:35:16.227 [http-nio-9000-exec-2] Logging - 1 has added an account
+[INFO ] 2020-06-25 11:35:16.275 [http-nio-9000-exec-3] Logging - null null has registered.
+[INFO ] 2020-06-25 11:35:16.351 [http-nio-9000-exec-5] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:39:59.829 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-06-25 11:43:56.929 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:43:57.221 [http-nio-9000-exec-3] Logging - 1 has added an account
+[INFO ] 2020-06-25 11:43:57.276 [http-nio-9000-exec-8] Logging - null null has registered.
+[INFO ] 2020-06-25 11:43:57.313 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-06-25 11:57:10.926 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-06-25 11:57:11.202 [http-nio-9000-exec-3] Logging - 1 has added an account
+[INFO ] 2020-06-25 11:57:11.278 [http-nio-9000-exec-5] Logging - null null has registered.
+[INFO ] 2020-06-25 11:57:11.322 [http-nio-9000-exec-6] Logging - 1 has updated their points
+
