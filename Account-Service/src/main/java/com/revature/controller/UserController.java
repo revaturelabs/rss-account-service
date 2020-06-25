@@ -89,7 +89,7 @@ public class UserController {
     	return u;
     }
     
-    //changed "/updateinf" to "/update/i"
+    //changed "/updateinf" to "/update/i"  /{userId}
     @RequestMapping(value= "/update/i", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
