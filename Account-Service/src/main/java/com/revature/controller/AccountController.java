@@ -32,7 +32,8 @@ public class AccountController {
 	}
 
 	//changed "/updatepoints" to /points
-    @RequestMapping(value= "/points", method = RequestMethod.POST)
+	@RequestMapping(value = "/points", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updatePoints(@RequestBody Account acc) {
@@ -42,7 +43,8 @@ public class AccountController {
         this.accservice.addAccount(a);
     }
     
-    @RequestMapping(value= "/points/a", method = RequestMethod.POST)
+    @RequestMapping(value = "/points/a", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void addPoints(@RequestBody Account acc) {
@@ -64,7 +66,7 @@ public class AccountController {
     }
     
     //changed "/getaccountbyaccid" to "/account/ai"
-    @RequestMapping(value = "/account/ai", method = RequestMethod.GET,
+    @RequestMapping(value = "/account/ai", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -74,7 +76,7 @@ public class AccountController {
     }
     
     //changed "/getaccountbyuserid" to "/account/ui"
-    @RequestMapping(value = "/account/ui", method = RequestMethod.GET,
+    @RequestMapping(value = "/account/ui", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
