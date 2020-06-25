@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "USER_TABLE")
 public class User {
@@ -53,6 +55,12 @@ public class User {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+	
+	public User(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
 
 
 
@@ -66,6 +74,14 @@ public class User {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.isAdmin = isAdmin;
+	}
+	
+	public User(String email, String password, String firstName, String lastName) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 	

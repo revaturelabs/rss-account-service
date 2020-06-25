@@ -9,7 +9,7 @@ import com.revature.entity.User;
 public interface UserDAO extends JpaRepository<User, Integer> {
 	
 	//login validation dao method
-	public boolean existsByEmailAndPassword(String email, String password);
+	public boolean existsByEmail(String email);
 	//getting user information
 	public User findUserByEmail(String email);
 	public User findUserByUserId(int userId);
