@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-2020-06-26 12:06:24 jdbc[14]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE[*]"; SQL statement:
-SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE [42000-200]
-2020-06-26 12:06:28 jdbc[14]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE[*] USER_TABLE"; SQL statement:
-SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE USER_TABLE [42000-200]
-=======
+
 2020-06-26 14:23:11 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/zacha/OneDrive/Desktop/Project3/rss-account-service/Account-Service/db/thedatabase.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
@@ -130,4 +123,3 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/zac
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 44 more
->>>>>>> b61338d4be264423e035a225ffceb4dd1c28a6f7
