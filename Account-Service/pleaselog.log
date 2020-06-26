@@ -130,3 +130,4 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-06-26 11:58:09.573 [http-nio-9000-exec-1] Logging - 3 has added an account
 [INFO ] 2020-06-26 11:58:15.011 [http-nio-9000-exec-2] Logging - 3 has added an account
 
+[ERROR] 2020-06-26 14:23:13.901 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
