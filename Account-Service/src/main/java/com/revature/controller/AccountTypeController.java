@@ -47,5 +47,16 @@ public class AccountTypeController {
     public List<AccountType> getAllAccountType() {
         return this.acctypeservice.getAllAccTypes();
     }
+    
+  //---------------Will update a current account type(for spelling errors, ect)---------------
+    @RequestMapping(value = "/type/u", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(code = HttpStatus.OK)
+    @ResponseBody()
+    public void updateAccountType(@RequestBody AccountType accType) {
+    	AccountType u = this.acctypeservice.findById(accType.getAccTypeId());
+    	u.setType(accType.getType());
+        this.acctypeservice.addAccountType(u);
+    }
 	
 }

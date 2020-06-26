@@ -1,3 +1,4 @@
+
 2020-06-26 14:23:11 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/zacha/OneDrive/Desktop/Project3/rss-account-service/Account-Service/db/thedatabase.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
