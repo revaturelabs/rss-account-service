@@ -47,11 +47,12 @@ public class AccountController {
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
-    public void addPoints(@RequestBody Account acc) {
+    public String addPoints(@RequestBody Account acc) {
         Account a = this.accservice.findById(acc.getAccId());
         a.setPoints(a.getPoints() + acc.getPoints());
         Logging.Log4("info", a.getUserId() + " has had "+acc.getPoints()+"points added to their account");
         this.accservice.addAccount(a);
+        return "userId: " +acc.getUserId()+ "pointsAdded: " +acc.getPoints()+ "pointsTotal: " +a.getPoints();
     }
 
 	
