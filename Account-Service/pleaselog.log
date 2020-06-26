@@ -113,4 +113,18 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-06-25 15:40:32.596 [http-nio-9000-exec-2] Logging - 1 has added an account
 [ERROR] 2020-06-25 15:40:32.724 [http-nio-9000-exec-2] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (1)"; SQL statement:
 insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?) [23506-200]
-
+[ERROR] 2020-06-26 11:33:59.626 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-06-26 11:37:03.387 [task-1] SqlExceptionHelper - Wrong user name or password [28000-200]
+[ERROR] 2020-06-26 11:38:05.004 [task-1] SqlExceptionHelper - Wrong user name or password [28000-200]
+[INFO ] 2020-06-26 11:41:01.689 [http-nio-9000-exec-8] Logging - admin admin has registered.
+[INFO ] 2020-06-26 11:46:18.403 [http-nio-9000-exec-3] Logging - Patrick Star has registered.
+[INFO ] 2020-06-26 11:52:10.042 [http-nio-9000-exec-2] Logging - Shia LaBeouf has registered.
+[INFO ] 2020-06-26 11:53:04.353 [http-nio-9000-exec-4] Logging - Bug Bounty has been added
+[INFO ] 2020-06-26 11:53:46.539 [http-nio-9000-exec-8] Logging - Evaluation Service has been added
+[INFO ] 2020-06-26 11:55:17.293 [http-nio-9000-exec-3] Logging - 1 has added an account
+[INFO ] 2020-06-26 11:55:28.706 [http-nio-9000-exec-1] Logging - 1 has added an account
+[INFO ] 2020-06-26 11:57:29.966 [http-nio-9000-exec-8] Logging - 1 has added an account
+[INFO ] 2020-06-26 11:57:50.508 [http-nio-9000-exec-10] Logging - 2 has added an account
+[INFO ] 2020-06-26 11:57:56.361 [http-nio-9000-exec-3] Logging - 2 has added an account
+[INFO ] 2020-06-26 11:58:09.573 [http-nio-9000-exec-1] Logging - 3 has added an account
+[INFO ] 2020-06-26 11:58:15.011 [http-nio-9000-exec-2] Logging - 3 has added an account
