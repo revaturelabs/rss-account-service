@@ -25,6 +25,23 @@
 [INFO ] 2020-06-22 17:15:58.324 [http-nio-9000-exec-1] Logging - 1 has added an account
 [INFO ] 2020-06-22 17:36:44.536 [http-nio-9000-exec-1] Logging - 1 has had 10points added to their account
 [INFO ] 2020-06-22 17:37:32.928 [http-nio-9000-exec-10] Logging - 1 has had 10points added to their account
+
+
+[INFO ] 2020-06-24 11:08:43.441 [http-nio-9000-exec-10] Logging - Mark string has registered.
+[INFO ] 2020-06-24 11:08:54.664 [http-nio-9000-exec-2] Logging - Mark string has registered.
+[INFO ] 2020-06-24 11:16:23.482 [http-nio-9000-exec-6] Logging - 1 has logged in
+[INFO ] 2020-06-24 12:10:30.441 [http-nio-9000-exec-9] Logging - 1 has logged in
+[INFO ] 2020-06-25 07:18:00.383 [http-nio-9000-exec-2] Logging - 1 has logged in
+[INFO ] 2020-06-25 07:18:35.408 [http-nio-9000-exec-3] Logging - 1 has logged in
+[INFO ] 2020-06-25 07:18:46.058 [http-nio-9000-exec-4] Logging - 1 has logged in
+[INFO ] 2020-06-25 12:59:41.170 [http-nio-9000-exec-1] Logging - 1 has logged in
+[INFO ] 2020-06-25 13:48:27.318 [http-nio-9000-exec-7] Logging - Eval has been added
+[INFO ] 2020-06-25 13:49:13.896 [http-nio-9000-exec-4] Logging - string string has registered.
+[INFO ] 2020-06-25 13:49:33.993 [http-nio-9000-exec-2] Logging - 1 has added an account
+[INFO ] 2020-06-25 14:33:43.113 [http-nio-9000-exec-3] Logging - 1 has had 10points added to their account
+[INFO ] 2020-06-25 14:34:24.277 [http-nio-9000-exec-5] Logging - 1 has had 10points added to their account
+[INFO ] 2020-06-25 14:53:11.049 [http-nio-9000-exec-7] Logging - 1 has had 1points added to their account
+
 [ERROR] 2020-06-24 16:17:20.978 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
 [ERROR] 2020-06-24 16:17:25.129 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
 [ERROR] 2020-06-24 16:17:29.270 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
@@ -93,7 +110,6 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-06-25 11:57:11.202 [http-nio-9000-exec-3] Logging - 1 has added an account
 [INFO ] 2020-06-25 11:57:11.278 [http-nio-9000-exec-5] Logging - null null has registered.
 [INFO ] 2020-06-25 11:57:11.322 [http-nio-9000-exec-6] Logging - 1 has updated their points
-
 [INFO ] 2020-06-25 15:40:32.596 [http-nio-9000-exec-2] Logging - 1 has added an account
 [ERROR] 2020-06-25 15:40:32.724 [http-nio-9000-exec-2] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (1)"; SQL statement:
 insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?) [23506-200]
