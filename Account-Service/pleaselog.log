@@ -94,3 +94,6 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-06-25 11:57:11.278 [http-nio-9000-exec-5] Logging - null null has registered.
 [INFO ] 2020-06-25 11:57:11.322 [http-nio-9000-exec-6] Logging - 1 has updated their points
 
+[INFO ] 2020-06-25 15:37:57.949 [http-nio-9000-exec-2] Logging - 1 has added an account
+[ERROR] 2020-06-25 15:37:58.005 [http-nio-9000-exec-2] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (1)"; SQL statement:
+insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?) [23506-200]
