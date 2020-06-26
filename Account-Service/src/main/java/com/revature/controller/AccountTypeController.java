@@ -30,8 +30,8 @@ public class AccountTypeController {
 		this.acctypeservice = acctypeservice;
 	}
 	
-	//changed "addaccounttype" to "/post/at"
-    @RequestMapping(value = "/atype", method = RequestMethod.POST,
+//---------------As an admin can add account types to the database---------------
+    @RequestMapping(value = "/type", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -40,8 +40,8 @@ public class AccountTypeController {
     	return this.acctypeservice.addAccountType(accType);
     }
 	
-    //changed "/getallaccounttype" to "/get/at"
-    @RequestMapping(value = "/atype", method = RequestMethod.GET)
+  //---------------Will pull all of the account types and return a list---------------
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public List<AccountType> getAllAccountType() {

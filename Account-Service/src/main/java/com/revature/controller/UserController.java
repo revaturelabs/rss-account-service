@@ -29,14 +29,14 @@ public class UserController {
     // Bcrypt encryption for user password
     BCryptPasswordEncoder encrypt = new BCryptPasswordEncoder();
 
-    //changed "/all" to "/all"
+  //---------------Returns all the users in the database as a List---------------
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<User> getAllUsers() {
     	return userservice.getAllUsers();
     }
 
-    //changed "/adduser" to "/user"
-    @RequestMapping(value = "/user", method = RequestMethod.POST,
+  //---------------Adds a new user to the database upon registration---------------
+    @RequestMapping(value = "/new", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -47,13 +47,12 @@ public class UserController {
     	
     	// Will encrypt user password for database security
     	user.setPassword(encrypt.encode(user.getPassword()));
-//    	String temp = encrypt.encode(user.getPassword());
-//    	System.out.println(user.getPassword());
-//    	System.out.println(temp);
     	
         return this.userservice.addUser(user);
     }
 	
+  //---------------Compares login credentials with whats in the database---------------
+    //Will return null if invalid
     @RequestMapping(value = "/login", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
@@ -70,8 +69,8 @@ public class UserController {
     	}
     }
 
-    //Changed "/getuserbyid" to "/user"
-    @RequestMapping(value = "/user", method = RequestMethod.GET,
+  //---------------Will pull a user from database by the id or email---------------
+    @RequestMapping(value = "/user", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -85,8 +84,8 @@ public class UserController {
     	return u;
     }
     
-    //changed "/updateinf" to "/update/i"  /{userId}
-    @RequestMapping(value= "/update/i", method = RequestMethod.POST,
+  //---------------Will Take in new user info and update the user in the database---------------
+    @RequestMapping(value= "/info", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -99,8 +98,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    //changed "/updatepassword" to "/update/p"
-    @RequestMapping(value= "/update/p", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+  //---------------Will take in new user password and encrypt before updating database---------------
+    @RequestMapping(value= "/cred", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
@@ -110,8 +109,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    //changed "updateprofilepic" to "/update/pp"
-    @RequestMapping(value= "/update/pp", method = RequestMethod.POST,
+  //---------------Will take an image and update it to the database---------------
+    @RequestMapping(value= "/pic", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -122,8 +121,8 @@ public class UserController {
         this.userservice.addUser(u);
     }
     
-    //chagned "/updateisadmin" to "/update/a"
-    @RequestMapping(value= "/update/a", method = RequestMethod.POST,
+  //---------------Updates user to admin---------------
+    @RequestMapping(value= "/master", method = RequestMethod.POST,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
