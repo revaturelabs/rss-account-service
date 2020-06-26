@@ -13,7 +13,7 @@ import com.revature.entity.User;
 
 import io.restassured.http.ContentType;
 
-@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
+//@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
 class H2DemoApplicationTests {
 	
 	@Test
