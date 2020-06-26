@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,9 +31,8 @@ public class AccountController {
 		this.accservice = accservice;
 	}
 
-	//changed "/updatepoints" to /points
-	@RequestMapping(value = "/points", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+//---------------Takes in the new account point total and saves it to database---------------
+    @RequestMapping(value= "/points", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updatePoints(@RequestBody Account acc) {
@@ -43,8 +42,9 @@ public class AccountController {
         this.accservice.addAccount(a);
     }
     
-    @RequestMapping(value = "/points/a", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+  //---------------Will take the new points and add them to the account point total---------------
+    @RequestMapping(value= "/points/a", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void addPoints(@RequestBody Account acc) {
@@ -55,8 +55,8 @@ public class AccountController {
     }
 
 	
-    //changed "/addaccount" to "/account"
-    @RequestMapping(value = "/account", method = RequestMethod.POST,
+  //---------------Takes in the new account and adds it to the database---------------
+    @RequestMapping(value = "/new", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -65,8 +65,8 @@ public class AccountController {
         return this.accservice.addAccount(acc);
     }
     
-    //changed "/getaccountbyaccid" to "/account/ai"
-    @RequestMapping(value = "/account/ai", method = RequestMethod.POST,
+  //---------------Will return the account, from the database, by the id---------------
+    @RequestMapping(value = "/account", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
@@ -75,8 +75,8 @@ public class AccountController {
         return a;
     }
     
-    //changed "/getaccountbyuserid" to "/account/ui"
-    @RequestMapping(value = "/account/ui", method = RequestMethod.POST,
+  //---------------Will return accounts related to the user id and return a list---------------
+    @RequestMapping(value = "/accounts", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
