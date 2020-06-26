@@ -48,6 +48,9 @@ public class UserController {
     	// Will encrypt user password for database security
     	user.setPassword(encrypt.encode(user.getPassword()));
     	
+    	// sets the email to lowercase to store in the database
+    	user.setEmail(user.getEmail().toLowerCase());
+    	
         return this.userservice.addUser(user);
     }
 	
@@ -58,12 +61,12 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User loginUser(@RequestBody User user) {
-    	User current = this.userservice.findUserByEmail(user.getEmail());
-    	if(!(this.userservice.existsByEmail(user.getEmail()) && encrypt.matches(user.getPassword(), current.getPassword()))) {
+    	User current = this.userservice.findUserByEmail(user.getEmail().toLowerCase());
+    	if(!(this.userservice.existsByEmail(user.getEmail().toLowerCase()) && encrypt.matches(user.getPassword(), current.getPassword()))) {
     		return null;
     	} else {
-    		User u = this.userservice.findUserByEmail(user.getEmail());
-    		//u.setPassword("*****");
+    		User u = this.userservice.findUserByEmail(user.getEmail().toLowerCase());
+    		u.setPassword("*****");
     		Logging.Log4("info", u.getUserId() + " has logged in");
     		return u;
     	}
@@ -77,7 +80,7 @@ public class UserController {
     public User findUserById(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
     	if(u==null) {
-    		u = this.userservice.findUserByEmail(user.getEmail());
+    		u = this.userservice.findUserByEmail(user.getEmail().toLowerCase());
     	}
     	//changing password before sending user to front end for security
     	u.setPassword("*****");
@@ -91,7 +94,7 @@ public class UserController {
     @ResponseBody()
     public void updateInformation(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
-        u.setEmail(user.getEmail());
+        u.setEmail(user.getEmail().toLowerCase());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
         Logging.Log4("info", user.getUserId() + " has updated their information");

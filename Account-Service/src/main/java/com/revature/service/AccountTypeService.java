@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.revature.dao.AccountTypeDAO;
 import com.revature.entity.AccountType;
+import com.revature.entity.User;
 
 @Service
 public class AccountTypeService {
@@ -25,5 +26,10 @@ public class AccountTypeService {
 	public AccountType addAccountType(AccountType accType) {
 		return acctypedao.save(accType);
 	}
+	
+	public AccountType findById(int accTypeId) {
+
+        return this.acctypedao.findAccTypeByAccTypeId(accTypeId);
+    }
 	
 }

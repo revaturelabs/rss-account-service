@@ -1,0 +1,6 @@
+2020-06-26 12:06:24 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE[*]"; SQL statement:
+SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE [42000-200]
+2020-06-26 12:06:28 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE[*] USER_TABLE"; SQL statement:
+SELECT * FROM USER_TABLE ACCOUNT_TABLE USER_TABLE USER_TABLE [42000-200]

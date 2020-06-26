@@ -112,3 +112,10 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-06-26 11:57:56.361 [http-nio-9000-exec-3] Logging - 2 has added an account
 [INFO ] 2020-06-26 11:58:09.573 [http-nio-9000-exec-1] Logging - 3 has added an account
 [INFO ] 2020-06-26 11:58:15.011 [http-nio-9000-exec-2] Logging - 3 has added an account
+[INFO ] 2020-06-26 14:11:41.521 [http-nio-9000-exec-1] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:12:04.656 [http-nio-9000-exec-4] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:15:15.717 [http-nio-9000-exec-2] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:15:32.509 [http-nio-9000-exec-5] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:24:50.448 [http-nio-9000-exec-2] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:24:59.968 [http-nio-9000-exec-3] Logging - 2 has logged in
+[INFO ] 2020-06-26 14:35:13.785 [http-nio-9000-exec-1] Logging - 2 has logged in
