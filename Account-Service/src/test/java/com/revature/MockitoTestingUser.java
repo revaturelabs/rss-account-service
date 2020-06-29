@@ -2,6 +2,7 @@ package com.revature;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
@@ -43,15 +44,17 @@ public class MockitoTestingUser {
 		assertEquals(user,userService.addUser(user));
 		}
 	
-//	@Test
-//	void existsByEmailTest() {
-//		
-//		//when(userService.existsByEmail(user.getEmail())).thenReturn(true);
-//		boolean a = userService.existsByEmail(user.getEmail());
-//		//when(userService.findUserByEmail(user.getEmail())).thenReturn(user);
-//		
-//		assertTrue(a);
-//	}
+	@Test
+	void existsByEmailTest() {
+		
+		when(userService.existsByEmail("email@email.com")).thenReturn(true);
+		
+		Boolean a = userService.existsByEmail("email@email.com");
+		assertTrue(a);
+		
+		Boolean b = userService.existsByEmail("sdfdsf");
+		assertFalse(b);
+	}
 	
 	@Test
 	void userByEmailTest() {
