@@ -12,7 +12,7 @@ node {
 
     /* The final stage runs Maven to deploy the JAR into a repository */
     stage('Deploy') {
-        sh 'mvn deploy -dSkipTests'
+        sh 'mvn deploy -DskipTests'
     }
 
 }
