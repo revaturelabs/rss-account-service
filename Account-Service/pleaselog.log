@@ -133,3 +133,15 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-09-02 11:06:05.971 [http-nio-9000-exec-6] Logging - 1 has updated their points
 [INFO ] 2020-09-02 11:09:40.039 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
 [INFO ] 2020-09-02 11:09:40.263 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:36:41.164 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:36:42.301 [http-nio-9000-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:41:45.912 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:41:46.930 [http-nio-9000-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:43:33.636 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:43:35.106 [http-nio-9000-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:46:58.479 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:46:59.621 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:49:01.123 [http-nio-9000-exec-2] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:49:02.427 [http-nio-9000-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-09 23:50:24.020 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-09 23:50:25.184 [http-nio-9000-exec-9] Logging - 1 has updated their points

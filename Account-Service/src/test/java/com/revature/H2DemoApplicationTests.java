@@ -5,7 +5,10 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
+import com.revature.service.AccountService;
+import com.revature.service.UserService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.revature.entity.Account;
@@ -13,17 +16,25 @@ import com.revature.entity.User;
 
 import io.restassured.http.ContentType;
 
-//@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
+import java.util.List;
+
+@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
 class H2DemoApplicationTests {
+    @Autowired
+    private AccountService as;
+
+    @Autowired
+    private UserService us;
 	
 	@Test
 	public void testUserControllerGetAllUsers() {
 		//will result in failure if size() is different from the size() of the actual database
+        int size = us.getAllUsers().size();
 		get("http://localhost:9000/user/all")
 				.then()
 				.assertThat()
 				.statusCode(200)
-				.body("size()", is(2));
+				.body("size()", is(size));
 	}
 	
     @Test
@@ -78,23 +89,22 @@ class H2DemoApplicationTests {
     
     @Test
     public void testAccountControllerGetAccountById() {
-    	Account a = new Account();
-    	a.setAccId(3);
+    	Account a = as.findById(1);
     	given()
     		.contentType(ContentType.JSON)
     		.body(a)
-    		.get("http://localhost:9000/account/account/ai")
+    		.post("http://localhost:9000/account/account")
     		.then().statusCode(200).extract().response();
     }
     
     @Test
     public void testAccountControllerGetAccountByUserId() {
-    	Account a = new Account();
-    	a.setUserId(1);
+    	List<Account> a = as.findAccountById(1);
+        System.out.println(a);
     	given()
     		.contentType(ContentType.JSON)
-    		.body(a)
-    		.get("http://localhost:9000/account/account/ui")
+    		.body(a.get(0))
+    		.post("http://localhost:9000/account/accounts")
     		.then().statusCode(200).extract().response();
     }
     
