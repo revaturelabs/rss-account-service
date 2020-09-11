@@ -41,7 +41,6 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public User addNewUser(@RequestBody User user) {
-    	
     	// Logs a new user
     	Logging.Log4("info", user.getFirstName() + " " + user.getLastName() + " has registered.");
     	

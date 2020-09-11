@@ -145,3 +145,48 @@ insert into account_table (acctype_id, points, u_id, acc_id) values (?, ?, ?, ?)
 [INFO ] 2020-09-09 23:49:02.427 [http-nio-9000-exec-8] Logging - 1 has updated their points
 [INFO ] 2020-09-09 23:50:24.020 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
 [INFO ] 2020-09-09 23:50:25.184 [http-nio-9000-exec-9] Logging - 1 has updated their points
+[INFO ] 2020-09-10 20:19:57.650 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-10 20:19:58.986 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-10 20:24:50.897 [http-nio-9000-exec-2] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-10 20:24:52.080 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-10 21:07:40.629 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 21:09:25.929 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 21:09:26.416 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-10 21:10:55.364 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 21:10:55.869 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-10 21:17:11.369 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 21:17:11.876 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-10 21:49:27.384 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[INFO ] 2020-09-10 21:57:47.836 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 21:57:48.265 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-10 22:01:31.635 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 22:01:32.107 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-10 22:14:45.050 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-09-10 22:14:51.885 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[INFO ] 2020-09-10 22:17:18.125 [http-nio-9000-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-10 22:17:18.507 [http-nio-9000-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 4"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-10 22:19:46.867 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:25:23.527 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:27:46.755 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:31:58.531 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:34:06.811 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:36:28.568 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:38:19.030 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:41:07.912 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:42:15.296 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-10 22:51:20.521 [http-nio-9000-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-10 22:57:27.327 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-10 22:58:16.136 [http-nio-9000-exec-1] Logging - 1 has had 40points added to their account
+[INFO ] 2020-09-10 23:00:43.626 [http-nio-9000-exec-3] Logging - 1 has had 80points added to their account
+[INFO ] 2020-09-10 23:09:26.703 [http-nio-9000-exec-1] Logging - 1 has had 160points added to their account
+[INFO ] 2020-09-10 23:09:27.797 [http-nio-9000-exec-7] Logging - null null has registered.
+[INFO ] 2020-09-10 23:09:29.609 [http-nio-9000-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-10 23:12:13.743 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-10 23:12:14.714 [http-nio-9000-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-10 23:12:16.622 [http-nio-9000-exec-1] Logging - 1 has updated their points

@@ -39,5 +39,9 @@ public class UserService {
 
         return this.userdao.findUserByUserId(userId);
     }
+    public User deleteUser(User u) {
+	    this.userdao.delete(u);
+	    return u;
+    }
     
 }
