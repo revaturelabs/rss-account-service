@@ -190,3 +190,6 @@ insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_
 [INFO ] 2020-09-10 23:12:13.743 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
 [INFO ] 2020-09-10 23:12:14.714 [http-nio-9000-exec-5] Logging - null null has registered.
 [INFO ] 2020-09-10 23:12:16.622 [http-nio-9000-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-10 23:53:58.452 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-10 23:53:59.584 [http-nio-9000-exec-6] Logging - null null has registered.
+[INFO ] 2020-09-10 23:54:01.662 [http-nio-9000-exec-2] Logging - 1 has updated their points

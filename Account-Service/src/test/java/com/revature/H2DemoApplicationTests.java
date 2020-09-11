@@ -66,6 +66,17 @@ class H2DemoApplicationTests {
     }
 
     @Test
+    void testUserControllerUserLogin() {
+	    User user = us.findById(1);
+        System.out.println(user);
+        given()
+            .contentType(ContentType.JSON)
+            .body(user)
+            .post("http://localhost:9000/user/login")
+            .then().statusCode(200).extract().response();
+    }
+
+    @Test
     void testAccountControllerUpdatePoints() {
         Account a = as.findById(1);
         a.setPoints(10);
