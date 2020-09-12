@@ -193,3 +193,258 @@ insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_
 [INFO ] 2020-09-10 23:53:58.452 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
 [INFO ] 2020-09-10 23:53:59.584 [http-nio-9000-exec-6] Logging - null null has registered.
 [INFO ] 2020-09-10 23:54:01.662 [http-nio-9000-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-09-11 10:38:20.546 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 10:38:22.626 [http-nio-9000-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 10:38:26.346 [http-nio-9000-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-09-11 10:47:05.139 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 10:47:07.103 [http-nio-9000-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 10:47:10.521 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-11 10:53:17.942 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 10:53:20.051 [http-nio-9000-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 10:53:23.678 [http-nio-9000-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-11 11:59:35.270 [http-nio-9000-exec-3] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 11:59:37.216 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-11 11:59:40.306 [http-nio-9000-exec-6] Logging - 1 has updated their points
+[INFO ] 2020-09-11 12:48:48.115 [http-nio-9000-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 12:48:49.317 [http-nio-9000-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 12:48:51.534 [http-nio-9000-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-11 12:49:59.349 [http-nio-9000-exec-3] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 12:50:00.366 [http-nio-9000-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-11 12:50:01.556 [http-nio-9000-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 14:21:57.215 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 14:21:58.409 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-11 14:22:00.760 [http-nio-auto-1-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-09-11 14:32:07.901 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 14:32:09.529 [http-nio-auto-1-exec-8] Logging - null null has registered.
+[INFO ] 2020-09-11 14:32:12.341 [http-nio-auto-1-exec-10] Logging - 1 has updated their points
+[ERROR] 2020-09-11 15:14:50.284 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[ERROR] 2020-09-11 15:14:59.171 [task-1] SqlExceptionHelper - Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+[INFO ] 2020-09-11 15:47:45.554 [http-nio-auto-1-exec-1] Logging - 1 has updated their information
+[INFO ] 2020-09-11 15:49:36.781 [http-nio-auto-1-exec-1] Logging - 1 has updated their information
+[INFO ] 2020-09-11 16:07:01.610 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[INFO ] 2020-09-11 16:09:00.979 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[ERROR] 2020-09-11 16:09:01.534 [http-nio-auto-1-exec-2] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:11:01.182 [http-nio-auto-1-exec-4] Logging - null null has registered.
+[ERROR] 2020-09-11 16:11:01.926 [http-nio-auto-1-exec-4] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:12:52.689 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[ERROR] 2020-09-11 16:12:53.235 [http-nio-auto-1-exec-2] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:15:19.296 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[ERROR] 2020-09-11 16:15:19.721 [http-nio-auto-1-exec-2] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:21:16.935 [http-nio-auto-1-exec-3] Logging - null null has registered.
+[ERROR] 2020-09-11 16:21:17.437 [http-nio-auto-1-exec-3] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:30:06.963 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[ERROR] 2020-09-11 16:30:07.504 [http-nio-auto-1-exec-2] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 16:33:20.322 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[ERROR] 2020-09-11 16:33:20.944 [http-nio-auto-1-exec-2] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 17:20:25.345 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 17:20:26.961 [http-nio-auto-1-exec-3] Logging - null null has registered.
+[ERROR] 2020-09-11 17:20:27.318 [http-nio-auto-1-exec-3] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 17:20:28.630 [http-nio-auto-1-exec-4] Logging - 1 has updated their points
+[INFO ] 2020-09-11 17:22:30.276 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-11 17:22:30.696 [http-nio-auto-1-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 17:26:20.786 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 17:26:22.151 [http-nio-auto-1-exec-6] Logging - null null has registered.
+[ERROR] 2020-09-11 17:26:22.496 [http-nio-auto-1-exec-6] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 31"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 17:26:23.350 [http-nio-auto-1-exec-9] Logging - 1 has updated their points
+[INFO ] 2020-09-11 17:33:53.708 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-11 17:35:29.621 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-11 21:59:49.544 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 21:59:51.318 [http-nio-auto-1-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 21:59:54.581 [http-nio-auto-1-exec-1] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:04:42.519 [http-nio-auto-1-exec-4] Logging - null null has registered.
+[INFO ] 2020-09-11 22:13:40.113 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:13:41.510 [http-nio-auto-1-exec-4] Logging - null null has registered.
+[ERROR] 2020-09-11 22:13:42.031 [http-nio-auto-1-exec-4] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:13:42.859 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:16:17.209 [http-nio-auto-1-exec-2] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:16:18.867 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[ERROR] 2020-09-11 22:16:19.324 [http-nio-auto-1-exec-1] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:16:20.137 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:18:02.935 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:18:04.324 [http-nio-auto-1-exec-10] Logging - null null has registered.
+[ERROR] 2020-09-11 22:18:04.691 [http-nio-auto-1-exec-10] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:18:05.503 [http-nio-auto-1-exec-7] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:20:30.398 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:20:31.659 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:20:32.056 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:20:33.013 [http-nio-auto-1-exec-10] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:21:46.694 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:21:48.158 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:21:48.557 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:21:49.668 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:23:22.174 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:23:23.718 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:23:24.087 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:23:25.082 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:29:07.557 [http-nio-auto-1-exec-4] Logging - null null has registered.
+[ERROR] 2020-09-11 22:29:07.927 [http-nio-auto-1-exec-4] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:29:08.522 [http-nio-auto-1-exec-7] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:29:58.960 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:30:00.000 [http-nio-auto-1-exec-9] Logging - null null has registered.
+[ERROR] 2020-09-11 22:30:00.336 [http-nio-auto-1-exec-9] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:30:00.954 [http-nio-auto-1-exec-2] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:33:06.329 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:33:07.383 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:33:07.729 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:33:08.343 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:34:40.798 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:34:41.764 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:34:42.174 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:34:42.782 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:35:56.936 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:35:57.958 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[ERROR] 2020-09-11 22:35:58.319 [http-nio-auto-1-exec-5] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 45"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[INFO ] 2020-09-11 22:35:59.086 [http-nio-auto-1-exec-8] Logging - 1 has updated their points
+[INFO ] 2020-09-11 22:39:49.621 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-11 22:48:36.897 [http-nio-auto-1-exec-1] Logging - 1 has had 20points added to their account
+[INFO ] 2020-09-11 22:48:37.764 [http-nio-auto-1-exec-6] Logging - null null has registered.
+[INFO ] 2020-09-11 22:48:39.072 [http-nio-auto-1-exec-10] Logging - 58 has updated their information
+[INFO ] 2020-09-11 22:48:39.604 [http-nio-auto-1-exec-3] Logging - 1 has updated their points
+[INFO ] 2020-09-11 23:10:51.215 [http-nio-auto-1-exec-1] Logging - 60 has had 35points added to their account
+[INFO ] 2020-09-11 23:10:53.242 [http-nio-auto-1-exec-9] Logging - null null has registered.
+[INFO ] 2020-09-11 23:10:53.677 [http-nio-auto-1-exec-2] Logging - 60 has updated their information
+[INFO ] 2020-09-11 23:10:53.912 [http-nio-auto-1-exec-7] Logging - 60 has updated their points
+[ERROR] 2020-09-11 23:10:54.152 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[ERROR] 2020-09-11 23:16:21.482 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.607 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.652 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.700 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.735 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.771 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.802 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.838 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.873 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:21.927 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:16:22.002 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:18:39.862 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[ERROR] 2020-09-11 23:20:06.859 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:06.978 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.020 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.059 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.088 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.126 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.155 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.184 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.216 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.257 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.293 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:20:07.868 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[ERROR] 2020-09-11 23:21:51.560 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.689 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.747 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.803 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.837 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.872 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.912 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.956 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:51.995 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:52.076 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:52.123 [main] SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK_MHBN1EY44PQQU2TXU7CHC8X99_INDEX_C ON PUBLIC.USER_TABLE(U_EMAIL) VALUES 60"; SQL statement:
+insert into user_table (u_email, first_name, is_admin, last_name, u_password, u_pic, u_id) values (?, ?, ?, ?, ?, ?, ?) [23505-200]
+[ERROR] 2020-09-11 23:21:52.755 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[INFO ] 2020-09-11 23:23:34.137 [http-nio-auto-1-exec-1] Logging - 60 has had 20points added to their account
+[INFO ] 2020-09-11 23:23:36.156 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-11 23:23:36.521 [http-nio-auto-1-exec-6] Logging - 60 has updated their information
+[INFO ] 2020-09-11 23:23:36.709 [http-nio-auto-1-exec-9] Logging - 60 has updated their points
+[ERROR] 2020-09-11 23:23:36.890 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[INFO ] 2020-09-11 23:28:47.446 [http-nio-auto-1-exec-1] Logging - 60 has had 20points added to their account
+[INFO ] 2020-09-11 23:28:50.000 [http-nio-auto-1-exec-6] Logging - null null has registered.
+[INFO ] 2020-09-11 23:28:50.410 [http-nio-auto-1-exec-7] Logging - 60 has updated their information
+[INFO ] 2020-09-11 23:28:50.696 [http-nio-auto-1-exec-10] Logging - 60 has updated their points
+[ERROR] 2020-09-11 23:29:24.387 [main] SqlExceptionHelper - Referential integrity constraint violation: "CONSTRAINT_D1023EFC_446: PUBLIC.ACCOUNT_TABLE FOREIGN KEY(U_ID) REFERENCES PUBLIC.USER_TABLE(U_ID) (60)"; SQL statement:
+delete from user_table where u_id=? [23503-200]
+[INFO ] 2020-09-11 23:34:14.242 [http-nio-auto-1-exec-1] Logging - 60 has had 20points added to their account
+[INFO ] 2020-09-11 23:34:16.253 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-11 23:34:16.616 [http-nio-auto-1-exec-6] Logging - 60 has updated their information
+[INFO ] 2020-09-11 23:34:16.824 [http-nio-auto-1-exec-9] Logging - 60 has updated their points
+[INFO ] 2020-09-12 00:02:23.049 [http-nio-auto-1-exec-1] Logging - 60 has had 20points added to their account
+[INFO ] 2020-09-12 00:02:25.345 [http-nio-auto-1-exec-6] Logging - null null has registered.
+[INFO ] 2020-09-12 00:02:25.771 [http-nio-auto-1-exec-7] Logging - 60 has updated their information
+[INFO ] 2020-09-12 00:02:25.980 [http-nio-auto-1-exec-9] Logging - 60 has updated their points
+[INFO ] 2020-09-12 00:07:03.762 [http-nio-auto-1-exec-3] Logging - 99 has had 35points added to their account
+[INFO ] 2020-09-12 00:07:05.838 [http-nio-auto-1-exec-1] Logging - null null has registered.
+[INFO ] 2020-09-12 00:07:06.186 [http-nio-auto-1-exec-2] Logging - 99 has updated their information
+[INFO ] 2020-09-12 00:07:06.407 [http-nio-auto-1-exec-9] Logging - 99 has updated their points
+[INFO ] 2020-09-12 00:18:20.397 [http-nio-auto-1-exec-1] Logging - 101 has had 35points added to their account
+[INFO ] 2020-09-12 00:18:22.406 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-12 00:18:22.760 [http-nio-auto-1-exec-6] Logging - 101 has updated their information
+[INFO ] 2020-09-12 00:18:23.015 [http-nio-auto-1-exec-9] Logging - 101 has updated their points
+[INFO ] 2020-09-12 00:18:23.388 [http-nio-auto-1-exec-10] Logging - 101 has updated their password
+[INFO ] 2020-09-12 00:19:38.058 [http-nio-auto-1-exec-2] Logging - 103 has had 35points added to their account
+[INFO ] 2020-09-12 00:19:40.107 [http-nio-auto-1-exec-5] Logging - null null has registered.
+[INFO ] 2020-09-12 00:19:40.507 [http-nio-auto-1-exec-7] Logging - 103 has updated their information
+[INFO ] 2020-09-12 00:19:40.796 [http-nio-auto-1-exec-9] Logging - 103 has updated their points
+[INFO ] 2020-09-12 00:19:41.150 [http-nio-auto-1-exec-2] Logging - 103 has updated their password
+[INFO ] 2020-09-12 00:21:35.440 [http-nio-auto-1-exec-1] Logging - 105 has had 35points added to their account
+[INFO ] 2020-09-12 00:21:37.416 [http-nio-auto-1-exec-7] Logging - null null has registered.
+[INFO ] 2020-09-12 00:21:37.763 [http-nio-auto-1-exec-6] Logging - 105 has updated their information
+[INFO ] 2020-09-12 00:21:37.965 [http-nio-auto-1-exec-10] Logging - 105 has updated their points
+[INFO ] 2020-09-12 00:21:38.238 [http-nio-auto-1-exec-1] Logging - 105 has updated their password
+[INFO ] 2020-09-12 00:22:45.357 [http-nio-auto-1-exec-1] Logging - 107 has had 35points added to their account
+[INFO ] 2020-09-12 00:22:47.576 [http-nio-auto-1-exec-6] Logging - null null has registered.
+[INFO ] 2020-09-12 00:22:48.032 [http-nio-auto-1-exec-7] Logging - 107 has updated their information
+[INFO ] 2020-09-12 00:22:48.285 [http-nio-auto-1-exec-10] Logging - 107 has updated their points
+[INFO ] 2020-09-12 00:22:48.591 [http-nio-auto-1-exec-1] Logging - 107 has updated their password
+[INFO ] 2020-09-12 00:25:51.214 [http-nio-auto-1-exec-1] Logging - 109 has had 35points added to their account
+[INFO ] 2020-09-12 00:25:53.369 [http-nio-auto-1-exec-2] Logging - null null has registered.
+[INFO ] 2020-09-12 00:25:53.791 [http-nio-auto-1-exec-3] Logging - 109 has updated their information
+[INFO ] 2020-09-12 00:25:53.997 [http-nio-auto-1-exec-10] Logging - 109 has updated their points
+[INFO ] 2020-09-12 00:25:54.272 [http-nio-auto-1-exec-1] Logging - 109 has updated their password

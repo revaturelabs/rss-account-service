@@ -34,5 +34,8 @@ public class AccountService {
     public List<Account> findAccountById(int userId) {
     	return this.accdao.findAccountByUserId(userId);
     }
-    
+    public Account deleteAccount(Account account) {
+	    this.accdao.delete(account);
+	    return account;
+    }
 }
