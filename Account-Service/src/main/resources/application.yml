@@ -1,0 +1,32 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:10002/eureka}
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+ribbon:
+  eureka:
+    enabled: true
+server:
+  port: 9000
+spring:
+  application:
+    name: account-service
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    url: jdbc:h2:file:./db/thedatabase
+    username: admin
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
