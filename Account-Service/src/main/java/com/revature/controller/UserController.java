@@ -88,7 +88,7 @@ public class UserController {
     }
     
   //---------------Will Take in new user info and update the user in the database---------------
-    @RequestMapping(value= "/info", method = RequestMethod.POST,
+    @RequestMapping(value= "/info", method = RequestMethod.PUT,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -102,7 +102,7 @@ public class UserController {
     }
     
   //---------------Will take in new user password and encrypt before updating database---------------
-    @RequestMapping(value= "/cred", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value= "/cred", method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()
     public void updatePassword(@RequestBody User user) {
@@ -113,7 +113,7 @@ public class UserController {
     }
     
   //---------------Will take an image and update it to the database---------------
-    @RequestMapping(value= "/pic", method = RequestMethod.POST,
+    @RequestMapping(value= "/pic", method = RequestMethod.PUT,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
@@ -125,7 +125,7 @@ public class UserController {
     }
     
   //---------------Updates user to admin---------------
-    @RequestMapping(value= "/master", method = RequestMethod.POST,
+    @RequestMapping(value= "/master", method = RequestMethod.PUT,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()

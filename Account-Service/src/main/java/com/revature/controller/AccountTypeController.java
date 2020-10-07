@@ -49,7 +49,7 @@ public class AccountTypeController {
     }
     
   //---------------Will update a current account type(for spelling errors, ect)---------------
-    @RequestMapping(value = "/type/u", method = RequestMethod.POST,
+    @RequestMapping(value = "/type/u", method = RequestMethod.PUT,
     		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody()

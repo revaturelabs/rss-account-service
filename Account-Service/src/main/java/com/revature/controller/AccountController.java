@@ -32,7 +32,7 @@ public class AccountController {
 	}
 
 //---------------Takes in the new account point total and saves it to database---------------
-    @RequestMapping(value= "/points", method = RequestMethod.POST)
+    @RequestMapping(value= "/points", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody()
     public void updatePoints(@RequestBody Account acc) {
