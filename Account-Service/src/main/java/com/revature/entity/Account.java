@@ -28,6 +28,7 @@ public class Account {
 	
     @Column(name = "POINTS", columnDefinition = "INTEGER DEFAULT 0")
 	private int points;
+ 
 
 	public Account() {
 		super();
@@ -43,8 +44,7 @@ public class Account {
 		this.points = points;
 	}
 
-	
-	
+
 	public Account(int userId, int accTypeId, int points) {
 		super();
 		this.userId = userId;
@@ -94,12 +94,44 @@ public class Account {
 		this.points = points;
 	}
 
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + accId;
+		result = prime * result + accTypeId;
+		result = prime * result + points;
+		result = prime * result + userId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Account other = (Account) obj;
+		if (accId != other.accId)
+			return false;
+		if (accTypeId != other.accTypeId)
+			return false;
+		if (points != other.points)
+			return false;
+		if (userId != other.userId)
+			return false;
+		return true;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Account [accId=" + accId + ", userId=" + userId + ", accTypeId=" + accTypeId + ", points=" + points
 				+ "]";
 	}
-    
-    
+
 	
 }

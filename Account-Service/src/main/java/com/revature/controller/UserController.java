@@ -84,6 +84,12 @@ public class UserController {
         u.setEmail(user.getEmail().toLowerCase());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
+        u.setUserDiscount(user.getUserDiscount());
+        if (u.getUserDiscount() > 0) {        	
+        	u.setUserDiscounted(true);
+        } else {
+        	u.setUserDiscounted(false);
+        }
         Logging.Log4("info", user.getUserId() + " has updated their information");
         this.userservice.addUser(u);
     }
