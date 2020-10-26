@@ -3,15 +3,13 @@ package com.revature.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.entity.User;
@@ -30,16 +28,13 @@ public class UserController {
     BCryptPasswordEncoder encrypt = new BCryptPasswordEncoder();
 
   //---------------Returns all the users in the database as a List---------------
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @GetMapping(value="/all")
     public List<User> getAllUsers() {
     	return userservice.getAllUsers();
     }
 
   //---------------Adds a new user to the database upon registration---------------
-    @RequestMapping(value = "/new", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+    @PostMapping(value="/new")
     public User addNewUser(@RequestBody User user) {
     	
     	// Logs a new user
@@ -56,10 +51,7 @@ public class UserController {
 	
   //---------------Compares login credentials with whats in the database---------------
     //Will return null if invalid
-    @RequestMapping(value = "/login", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+    @PostMapping(value="/login")
     public User loginUser(@RequestBody User user) {
     	User current = this.userservice.findUserByEmail(user.getEmail().toLowerCase());
     	if(!(this.userservice.existsByEmail(user.getEmail().toLowerCase()) && encrypt.matches(user.getPassword(), current.getPassword()))) {
@@ -73,10 +65,8 @@ public class UserController {
     }
 
   //---------------Will pull a user from database by the id or email---------------
-    @RequestMapping(value = "/user", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+    
+    @PostMapping(value="/user")
     public User findUserById(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
     	if(u==null) {
@@ -88,23 +78,24 @@ public class UserController {
     }
     
   //---------------Will Take in new user info and update the user in the database---------------
-    @RequestMapping(value= "/info", method = RequestMethod.POST,
-    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody()
+    @PutMapping(value="/info")
     public void updateInformation(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
         u.setEmail(user.getEmail().toLowerCase());
         u.setFirstName(user.getFirstName());
         u.setLastName(user.getLastName());
+        u.setUserDiscount(user.getUserDiscount());
+        if (u.getUserDiscount() > 0) {        	
+        	u.setUserDiscounted(true);
+        } else {
+        	u.setUserDiscounted(false);
+        }
         Logging.Log4("info", user.getUserId() + " has updated their information");
         this.userservice.addUser(u);
     }
     
   //---------------Will take in new user password and encrypt before updating database---------------
-    @RequestMapping(value= "/cred", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+    @PutMapping(value="/cred")
     public void updatePassword(@RequestBody User user) {
     	User u = this.userservice.findById(user.getUserId());
     	u.setPassword(encrypt.encode(user.getPassword()));
@@ -113,10 +104,7 @@ public class UserController {
     }
     
   //---------------Will take an image and update it to the database---------------
-    @RequestMapping(value= "/pic", method = RequestMethod.POST,
-    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody()
+    @PutMapping(value="/pic")
     public void updateProfilePic(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
         u.setProfilePic(user.getProfilePic());
@@ -125,10 +113,7 @@ public class UserController {
     }
     
   //---------------Updates user to admin---------------
-    @RequestMapping(value= "/master", method = RequestMethod.POST,
-    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody()
+    @PutMapping(value="/master")
     public void updateIsAdmin(@RequestBody User user) {
         User u = this.userservice.findById(user.getUserId());
         if(u.isAdmin() == true) {

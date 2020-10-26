@@ -3,14 +3,12 @@ package com.revature.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.entity.AccountType;
@@ -31,28 +29,23 @@ public class AccountTypeController {
 	}
 	
 //---------------As an admin can add account types to the database---------------
-    @RequestMapping(value = "/type", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+    
+    @PostMapping(value="/type")
     public AccountType addAccountType(@RequestBody AccountType accType) {
     	Logging.Log4("info", accType.getType() + " has been added");
     	return this.acctypeservice.addAccountType(accType);
     }
 	
   //---------------Will pull all of the account types and return a list---------------
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+
+    @GetMapping(value="/all")
     public List<AccountType> getAllAccountType() {
         return this.acctypeservice.getAllAccTypes();
     }
     
   //---------------Will update a current account type(for spelling errors, ect)---------------
-    @RequestMapping(value = "/type/u", method = RequestMethod.POST,
-    		consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(code = HttpStatus.OK)
-    @ResponseBody()
+ 
+    @PutMapping(value="type/u")
     public void updateAccountType(@RequestBody AccountType accType) {
     	AccountType u = this.acctypeservice.findById(accType.getAccTypeId());
     	u.setType(accType.getType());
