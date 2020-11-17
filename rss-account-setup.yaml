@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: rss-account
-        image: baronvonfroglok/rss-account:latest
+        image: 855430746673.dkr.ecr.us-east-1.amazonaws.com/matt-oberlies-00000916-rss-account:latest
         ports:
         - containerPort: 9000
         livenessProbe:
