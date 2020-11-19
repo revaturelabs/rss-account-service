@@ -3,6 +3,7 @@ package com.revature.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,9 @@ public class AccountController {
 	public AccountController(AccountService accservice) {
 		this.accservice = accservice;
 	}
+	
+	@Autowired
+	private DiscoveryClient discoveryClient;
 
 //---------------Takes in the new account point total and saves it to database---------------
 
