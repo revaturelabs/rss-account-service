@@ -1,18 +1,4 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_SERVER:http://localhost:10002/eureka}
-  instance:
-    lease-expiration-duration-in-seconds: 2
-    lease-renewal-interval-in-seconds: 1
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-ribbon:
-  eureka:
-    enabled: true
+
 server:
   port: 9000
 spring:
@@ -30,3 +16,13 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+  cloud:
+    kubernetes:      ribbon:        mode: POD
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true

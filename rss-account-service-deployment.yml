@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rss-account-service-deployment
+  labels:
+    app: rss-account-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rss-account-service
+  template:
+    metadata:
+      labels:
+        app: rss-account-service
+    spec:
+      containers:
+      - name: rss-account-service
+        image: baronvonfroglok/rss-account-service:latest
+        ports:
+        - containerPort: 9000
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 9000
+          initialDelaySeconds: 30
+          periodSeconds: 30

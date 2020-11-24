@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rss-account-deployment
+  labels:
+    app: rss-account
+spec:
+  replicas: 1
+  minReadySeconds: 20
+  selector:
+    matchLabels:
+      app: rss-account
+  template:
+    metadata:
+      labels:
+        app: rss-account
+    spec:
+      containers:
+      - name: rss-account
+        image: 855430746673.dkr.ecr.us-east-1.amazonaws.com/matt-oberlies-00000916-rss-account:latest
+        ports:
+        - containerPort: 9000
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 9000
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          failureThreshold: 5
+        startupProbe:
+          httpGet:
+            path: /actuator/health
+            port: 9000
+          initialDelaySeconds: 15
+          periodSeconds: 3
+          failureThreshold: 5
+		  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rss-account-service
+spec:
+  selector:
+    app: rss-account
+  ports:
+    - name: http
+      protocol: TCP
+      port: 9000
+      targetPort: 9000
+	  
+---
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: rss-account-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /account(.+)
+        backend:
+          serviceName: rss-account
+          servicePort: 9000
